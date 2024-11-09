@@ -10,7 +10,10 @@ class User(UserMixin, db.Model):
     
     id = db.Column(db.Integer(), primary_key=True)
     username = db.Column(db.String(), unique = True, nullable=False)
+    nombre = db.Column(db.String())
+    apellidos = db.Column(db.String())
     email = db.Column(db.String())
+    cellPhone = db.Column(db.String())
     password = db.Column(db.Text())
     roles = db.Column(db.String(50), nullable=False)
     

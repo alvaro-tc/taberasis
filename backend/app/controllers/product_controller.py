@@ -37,8 +37,6 @@ def create_product():
     product.save()
     return jsonify(render_product_detail(product)), 201
 
-
-
 @product_bp.route("/products/<int:id>", methods=["PUT"])
 @jwt_required
 @roles_required(roles=["admin"])
